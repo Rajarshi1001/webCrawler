@@ -35,7 +35,8 @@ def check_ssl(hostname):
                 index = subject[i]
                 dns.append(index[1])
 
-            st.write('----------------SSL Certificate Details-------------------')
+            st.title('SSL Certificate Report')
+            st.markdown('---')
             table  = PrettyTable(['Fields', 'Values'])
             table.add_row(["version", cert["version"]])
             table.add_row(["commonName", issued_to])
@@ -53,6 +54,8 @@ def check_ssl(hostname):
             st.json(data)
             
         except:
-            st.write('no SSL certificate enabled for this URL!!')
+            st.title('SSL Certificate Report')
+            st.markdown('---')
+            st.markdown('no **SSL** certificate enabled for this URL!!')
 
 # check_ssl(hostname)

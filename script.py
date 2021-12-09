@@ -180,7 +180,7 @@ def printJson(line, cookies, info):
             'httponly': httponlyResult
         }
         cookies_output.append(data)
-        if info:
+        if 1:
             if cookie.expires is not None:
                 expires = datetime.datetime.fromtimestamp(cookie.expires).strftime('%Y-%m-%d %H:%M:%S')
             else:
@@ -245,7 +245,8 @@ def googleSearch(domain, info, nocolor, formatoutput, delay, timeout):
 
 
 def opciones():
-        st.write('----------------------Cookie Details------------------------')
+        st.title('Cookie Details')
+        st.markdown('---')
         parser = OptionParser("usage: %prog [options] \nExample: ./%prog -i ips.txt")
         parser.add_option("-i", "--input",
                   action="store", type="string", dest="input", help="File input with the list of webservers")

@@ -9,7 +9,8 @@ args = parser.parse_args()
 url = args.link
 
 def check_alttxt(url):
-    st.write('-----------------Images without Alt text reports-----------------')
+    st.title('Images without Alt text reports')
+    st.markdown('---')
     html = requests.get(url).content
     c=0
     soup = BeautifulSoup(html, "html.parser")

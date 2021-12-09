@@ -13,7 +13,8 @@ url = args.link
 
 def check_tab(url):
     # url=input()
-    st.write('----------------------Null tab index reports------------------------')
+    st.title('Null tab index reports')
+    st.markdown('---')
     html = requests.get(url).content
     c=0
     soup = BeautifulSoup(html, "html.parser")
